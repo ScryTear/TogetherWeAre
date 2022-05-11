@@ -4,42 +4,28 @@
     font-family: sans-serif;
 }
 
-.banner{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("img/Afrikaanderplein-Map.png");
-    background-size: cover;
-    background-position: center;
-}
-
-.nav{
+nav{
     width: 100%;
     margin: auto;
     padding: 25px 0;
     display: flex;
     text-align: center;
     justify-content: space-between;
+    font-size: 20px;
 }
 
-.logo{
-    width: 120px;
-    margin: 50px;
-    padding: -20px;
-    cursor: pointer;
-}
-
-.nav ul li{
+nav ul li{
     list-style: none;
     display: inline-block;
     margin: 0 20px;
 }
-.nav ul li a{
+nav ul li a{
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
     position: relative;
 }
-.nav ul li a::after{
+nav ul li a::after{
     content: '';
     width: 0;
     height: 10px;
@@ -50,8 +36,58 @@
     transition: 0.5s;
 }
 
-.nav ul li a:hover::after{
+nav ul li a:hover::after{
     width: 100%;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid darkslategray;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+span{
+    background: darkslategray;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("img/Afrikaanderplein-Map.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.logo{
+    width: 120px;
+    margin: 50px;
+    padding: -20px;
+    cursor: pointer;
 }
 
 .content{
@@ -75,44 +111,14 @@
     line-height: 25px;
 }
 
-button{
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid darkslategray;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-span{
-    background: darkslategray;
-    height: 100%;
-    width: 0;
-    border-radius: 25px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: 0.5s;
-}
-
-button:hover span{
-    width: 100%;
-}
-
-button:hover{
-    border: none;
-}
-
-@media screen and (max-width: 480px) and (max-height: 600px){
-
-    .content p {
-        font-size: 100%;
+@media screen and (max-width: 650px){
+    nav{
+        display: block;
+    }
+    .content h1{
+        font-size: 40px;
+    }
+    .content p{
+        font-size: 20px;
     }
 }
